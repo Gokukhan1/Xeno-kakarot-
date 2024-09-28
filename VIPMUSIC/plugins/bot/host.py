@@ -17,9 +17,9 @@ urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
 
 HEROKU_API_URL = "https://api.heroku.com"
 HEROKU_API_KEY = os.getenv("HEROKU_API_KEY")  # Pre-defined variable
-REPO_URL = "https://github.com/THE-VIP-BOY-OP/VIP-MUSIC"
+REPO_URL = "https://github.com/Gokukhan1/Xeno-kakarot-"
 BUILDPACK_URL = "https://github.com/heroku/heroku-buildpack-python"
-UPSTREAM_REPO = "https://github.com/THE-VIP-BOY-OP/VIP-MUSIC"  # Pre-defined variable
+UPSTREAM_REPO = "https://github.com/Gokukhan1/Xeno-kakarot-"  # Pre-defined variable
 UPSTREAM_BRANCH = "master"  # Pre-defined variable
 API_ID = os.getenv("API_ID")
 API_HASH = os.getenv("API_HASH")
@@ -240,7 +240,7 @@ async def get_heroku_config(app_name):
 async def ask_repo_choice(message):
     buttons = [
         [
-            InlineKeyboardButton("VIP MSUIC REPO", callback_data="deploy_upstream"),
+            InlineKeyboardButton("KAKAROT REPO", callback_data="deploy_upstream"),
         ],
         [
             InlineKeyboardButton("OTHER REPO", callback_data="deploy_external"),
@@ -248,7 +248,7 @@ async def ask_repo_choice(message):
     ]
     reply_markup = InlineKeyboardMarkup(buttons)
     ask = await message.reply_text(
-        "From which repo do you want to deploy from the **VIP MUSIC Repo** or an **Any External Other Repo**?",
+        "From which repo do you want to deploy from the **kakarot Repo** or an **Any External Other Repo**?",
         reply_markup=reply_markup,
     )
 
