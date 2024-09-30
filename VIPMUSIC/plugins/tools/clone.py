@@ -15,7 +15,7 @@ from config import API_ID, API_HASH
 from VIPMUSIC import app
 from VIPMUSIC.misc import SUDOERS
 from VIPMUSIC.utils.database import get_assistant, clonebotdb
-from config import LOGGER_ID
+from config import LOG_GROUP_ID
 
 CLONES = set()
 
