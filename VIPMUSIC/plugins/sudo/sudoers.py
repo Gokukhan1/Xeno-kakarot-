@@ -6,7 +6,7 @@ from pyrogram.types import (
     CallbackQuery,
 )
 from pyrogram.types import Message
-from strings import get_string, helpers
+from strings import get_command
 from VIPMUSIC import app
 from VIPMUSIC.misc import SUDOERS
 from VIPMUSIC.utils.database import add_sudo, remove_sudo
