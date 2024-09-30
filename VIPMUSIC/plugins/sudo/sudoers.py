@@ -17,7 +17,7 @@ from config import BANNED_USERS, OWNER_ID
 
 
 @app.on_message(
-    filters.command(["addsudo"], prefixes=["/", "!", "%", ",", "", ".", "@", "#"])
+    filters.command(["addsudo", "kabhaihai", "kadost"], prefixes=["/", "!", "%", ",", "goku", ".", "@", "#"])
     & filters.user(OWNER_ID)
 )
 @language
@@ -38,7 +38,7 @@ async def useradd(client, message: Message, _):
 
 @app.on_message(
     filters.command(
-        ["delsudo", "rmsudo"], prefixes=["/", "!", "%", ",", "", ".", "@", "#"]
+        ["delsudo", "rmsudo", "dogla", "betichod"], prefixes=["/", "!", "%", ",", ".", "@", "#"]
     )
     & filters.user(OWNER_ID)
 )
@@ -58,13 +58,13 @@ async def userdel(client, message: Message, _):
         await message.reply_text(_["sudo_8"])
 
 
-photo_url = "https://telegra.ph/file/7606c1afd5cffe91eb22a.jpg"
+photo_url = "https://envs.sh/S8h.mp4"
 
 
 @app.on_message(
     filters.command(
-        ["sudolist", "listsudo", "sudoers"],
-        prefixes=["/", "!", "%", ",", "", ".", "@", "#"],
+        ["sudolist", "listsudo", "sudoers", "bhailog"],
+        prefixes=["/", "!", "%", ",", "goku", ".", "@", "#"],
     )
     & ~BANNED_USERS
 )
@@ -85,7 +85,7 @@ async def check_sudo_list(client, callback_query: CallbackQuery):
     keyboard = []
     if callback_query.from_user.id not in SUDOERS:
         return await callback_query.answer(
-            "𝐍𝐢𝐤𝐚𝐥 𝐑𝐚𝐧𝐝𝐢 𝐁𝐚𝐥𝐚 𝐒𝐮𝐝𝐨𝐥𝐢𝐬𝐭 𝐃𝐞𝐤𝐡𝐧𝐞 𝐀𝐚𝐲𝐚 𝐇𝐚𝐢 𝐛𝐚𝐝𝐚🖕😎😂", show_alert=True
+            "Abbu bol bosdke 🤣🤣 chal be dalle sudo dekhega nikal🤣🤣 ", show_alert=True
         )
     else:
         user = await app.get_users(OWNER_ID)
