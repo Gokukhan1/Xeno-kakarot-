@@ -21,7 +21,7 @@ class temp:
     B_NAME = None
     WELCOME_ENABLED = {}  # Dictionary to keep track of special welcome status
 
-def circle(pfp, size=(259, 259)):
+def circle(pfp, size=(264, 275)):
     pfp = pfp.resize(size, Image.ANTIALIAS).convert("RGBA")
     bigsize = (pfp.size[0] * 3, pfp.size[1] * 3)
     mask = Image.new("L", bigsize, 0)
@@ -36,7 +36,7 @@ def welcomepic(pic, user, chat, id, uname):
     background = Image.open("assets/hasnainkk.png")
     pfp = Image.open(pic).convert("RGBA")
     pfp = circle(pfp)
-    pfp = pfp.resize((259, 259))
+    pfp = pfp.resize((264, 275))
     pfp_x = 55
     pfp_y = (background.size[1] - pfp.size[1]) // 2 + 38
     draw = ImageDraw.Draw(background)
